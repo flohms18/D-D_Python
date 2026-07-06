@@ -1,4 +1,3 @@
-def hello():
-    print("hello world")
+import streamlit as st
 
-hello()
+st.write("Hello World!")
