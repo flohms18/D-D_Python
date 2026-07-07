@@ -21,3 +21,9 @@ RemoveNan = st.checkbox("Remove the NaN values?")
 if RemoveNan:
     new_df = df.dropna()
     st.write(new_df)
+    st.download_button(
+        label="Download New CSV File",
+        data = new_df.to_csv(index=False),
+        mime="text/csv",
+        icon=":material/download:",
+    )
