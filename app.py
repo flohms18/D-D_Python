@@ -5,18 +5,14 @@ import os
 st.title("Pandry")
 
 
-'''
-upload_file = st.file_uploader("Pick a CSV file", type=["csv"])
 
-if upload_file is not None:
-    df = pd.read_csv(upload_file)
-    st.write(df)
-'''
 
 df = pd.read_csv("test_data.csv")
 st.header("What to do with CSV file?")
+st.write(df)
 
 RemoveNan = st.checkbox("Remove the NaN values?")
+RemoveDuplicates = st.checkbox("Remove Duplicates?")
 
 if RemoveNan:
     new_df = df.dropna()
