@@ -14,8 +14,9 @@ st.write(df)
 RemoveNan = st.checkbox("Remove the NaN values?")
 RemoveDuplicates = st.checkbox("Remove Duplicates?")
 
-if RemoveNan:
+if RemoveNan and RemoveDuplicates:
     new_df = df.dropna()
+    new_df = new_df.drop_duplicates()
     st.write(new_df)
     st.download_button(
         label="Download New CSV File",
