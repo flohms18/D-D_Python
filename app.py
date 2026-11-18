@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import os
 
-st.title("Pandry")
+st.title("Streamlit Cleaning App")
 
 
 
